@@ -1,4 +1,3 @@
-import { Github } from "lucide-react";
 import "./App.css";
 import { KanbanBoard } from "./components/KanbanBoard";
 import { ThemeToggle } from "./components/ThemeToggle";
@@ -21,12 +20,13 @@ function App() {
   return (
     <>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <div className="flex flex-col min-h-screen">
-          <main className="flex flex-col h-full gap-6 mx-4">
+        <div className="flex flex-col min-h-screen min-w-full items-center">
+          <main className="flex flex-col h-full gap-6 mx-4 w-[55%] bg-blue-300 rounded-lg p-4">
             <h1 className="text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl">
               Drag and Drop Kanban Board
             </h1>
-            <KanbanBoard />
+            <ThemeToggle/>
+            <KanbanBoard/>
           </main>
         </div>
       </ThemeProvider>
